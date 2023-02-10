@@ -1,6 +1,6 @@
 import {Blog} from 'contentlayer/generated'
 import dayjs from 'dayjs'
-import {Calendar} from 'lucide-react'
+import {Calendar, Clock} from 'lucide-react'
 import Image from 'next/image'
 import {FC} from 'react'
 import relativeTime from 'dayjs/plugin/relativeTime'
@@ -40,6 +40,10 @@ export const Post: FC<PostProps> = ({blog}) => (
         </p>
       </div>
       <div className="flex flex-row space-x-3">
+        <span className="badge">
+          <Clock />
+          {blog.readingTime.minutes.toFixed(0)} minute read
+        </span>
         <span className="badge">
           <Calendar />
           {dayjs(blog.publishedAt).fromNow()}

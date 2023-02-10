@@ -19,6 +19,7 @@ export type Blog = {
   image?: string | undefined
   /** MDX file body */
   body: MDX
+  readingTime: json
   slug: string
 }  
 

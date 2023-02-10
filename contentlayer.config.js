@@ -6,6 +6,10 @@ import readingTime from 'reading-time'
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
+  readingTime: {
+    type: 'json',
+    resolve: doc => readingTime(doc.body.raw),
+  },
   slug: {
     type: 'string',
     resolve: doc => doc._raw.flattenedPath,
