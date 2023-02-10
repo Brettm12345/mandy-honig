@@ -22,7 +22,7 @@ export async function generateMetadata({params}: {params: {slug: string}}) {
     image,
     slug,
   } = post
-  const ogImage = `https://mandy.vercel.app/${image}`
+  const ogImage = `https://livewellwithmandy.com/${image}`
 
   return {
     title,
@@ -32,7 +32,7 @@ export async function generateMetadata({params}: {params: {slug: string}}) {
       description,
       type: 'article',
       publishedTime,
-      url: `https://mandy.vercel.app/blog/${slug}`,
+      url: `https://livewellwithmandy.com/posts/${slug}`,
       images: [
         {
           url: ogImage,
