@@ -7,7 +7,7 @@ const About = () => (
       endurance athlete from the Garden State. She has a passion for long
       distance bike rides, once reaching 100 miles during the Twin Lights Bike
       Tour. Her interest in writing came to fruition from a young age as she
-      excelled in her language arts classes.
+      began writing poetry.
     </p>
     <p>
       After years of struggling with substance abuse she decided to get sober.
