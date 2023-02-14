@@ -1,9 +1,5 @@
-import { Calendar } from "lucide-react";
-import { compareDesc } from "date-fns";
+import { compareAsc } from "date-fns";
 import { allBlogs } from "contentlayer/generated";
-import Image from "next/image";
-import Link from "next/link";
-import dayjs from "dayjs";
 import { Post } from "@/components/Post";
 
 export const metadata = {
@@ -23,7 +19,7 @@ export default function Home() {
       <ul className="space-y-6">
         {allBlogs
           .sort((a, b) =>
-            compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))
+            compareAsc(new Date(a.publishedAt), new Date(b.publishedAt))
           )
           .map((blog) => (
             <Post key={blog.slug} blog={blog} />
