@@ -1,4 +1,4 @@
-import { compareAsc } from "date-fns";
+import { compareDesc } from "date-fns";
 import { allBlogs } from "contentlayer/generated";
 import { Post } from "@/components/Post";
 
@@ -19,7 +19,7 @@ export default function Home() {
       <ul className="space-y-6">
         {allBlogs
           .sort((a, b) =>
-            compareAsc(new Date(a.publishedAt), new Date(b.publishedAt))
+            compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))
           )
           .map((blog) => (
             <Post key={blog.slug} blog={blog} />
