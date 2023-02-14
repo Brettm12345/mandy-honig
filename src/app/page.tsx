@@ -1,5 +1,5 @@
 import { Calendar } from "lucide-react";
-
+import { compareDesc } from "date-fns";
 import { allBlogs } from "contentlayer/generated";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,9 +21,13 @@ export default function Home() {
   return (
     <div>
       <ul className="space-y-6">
-        {allBlogs.map((blog) => (
-          <Post key={blog.slug} blog={blog} />
-        ))}
+        {allBlogs
+          .sort((a, b) =>
+            compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))
+          )
+          .map((blog) => (
+            <Post key={blog.slug} blog={blog} />
+          ))}
       </ul>
     </div>
   );
