@@ -20,7 +20,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      <ul className="space-x-6">
+      <ul className="space-y-6">
         {allBlogs.map((blog) => (
           <Post key={blog.slug} blog={blog} />
         ))}
