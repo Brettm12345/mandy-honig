@@ -2,6 +2,7 @@ import {notFound} from 'next/navigation'
 import {Mdx} from '@/components/Mdx'
 import {allBlogs} from 'contentlayer/generated'
 import Balancer from 'react-wrap-balancer'
+import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar'
 
 export async function generateStaticParams() {
   return allBlogs.map(post => ({
@@ -9,10 +10,10 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({params}: {params: {slug: string}}) {
+export const generateMetadata = ({params}: {params: {slug: string}}) => {
   const post = allBlogs.find(post => post.slug === params?.slug)
   if (!post) {
-    return
+    return {}
   }
 
   const {
@@ -60,11 +61,15 @@ export default async function Blog({params}: {params: {slug: string}}) {
       <h1 className="font-bold text-3xl max-w-[650px]">
         <Balancer>{post.title}</Balancer>
       </h1>
-      <div className="grid grid-cols-[auto_1fr_auto] items-center mt-4 mb-8 font-mono text-sm max-w-[650px]">
-        <div className="bg-neutral-100 dark:bg-neutral-800 rounded-md px-2 py-1 tracking-tighter">
+      <div className="grid grid-cols-[auto_1fr_auto] items-center mt-4 mb-8 text-sm max-w-[650px]">
+        <div className="bg-gray-100 dark:bg-gray-800 rounded-md px-2 py-1 tracking-tighter">
           {post.publishedAt}
         </div>
-        <div className="h-[0.2em] bg-neutral-50 dark:bg-neutral-800 mx-2" />
+        <div className="h-[0.2em] bg-gray-100 dark:bg-gray-800 mx-2" />
+        <Avatar>
+          <AvatarImage src="images/avatar.jpg" />
+          <AvatarFallback>MH</AvatarFallback>
+        </Avatar>
       </div>
       <Mdx code={post.body.code} />
     </section>

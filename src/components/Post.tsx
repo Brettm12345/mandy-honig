@@ -15,7 +15,7 @@ interface PostProps {
 export const Post: FC<PostProps> = ({blog}) => (
   <li
     key={blog.slug}
-    className="link-box flex flex-col md:flex-row bg-white dark:bg-gray-100/5 dark:hover:bg-white/10 hover:bg-gray-700/5 shadow-sm hover:shadow-lg transition-all flex flex-row space-x-3 rounded-md p-3 border dark:border-gray-800 relative"
+    className="link-box flex-col md:flex-row bg-white dark:bg-gray-100/5 dark:hover:bg-white/10 hover:bg-gray-700/5 shadow-sm hover:shadow-lg transition-all flex space-x-3 rounded-md p-3 border dark:border-gray-800 relative"
   >
     <Image
       className="rounded-md min-w-[120px] h-[200px] mx-auto mb-4"
