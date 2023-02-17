@@ -16,6 +16,7 @@ export const ThemeToggle: FC = () => {
   return (
     <button
       className="font-medium rounded-full focus:ring-1 focus:ring-gray-100 focus:ring-offset-2 focus:ring-offset-transparent dark:focus:ring-gray-800 text-lg p-4 inline-flex focus:outline-none"
+      aria-label="Change theme"
       onClick={toggleTheme}
     >
       {theme === 'dark' ? <MoonIcon /> : <SunIcon />}
