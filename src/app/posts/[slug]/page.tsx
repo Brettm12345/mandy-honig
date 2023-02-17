@@ -58,10 +58,10 @@ export default async function Blog({params}: {params: {slug: string}}) {
 
   return (
     <section>
-      <h1 className="font-bold text-3xl max-w-[650px]">
+      <h1 className="font-bold text-3xl">
         <Balancer>{post.title}</Balancer>
       </h1>
-      <div className="grid grid-cols-[auto_1fr_auto] items-center mt-4 mb-8 text-sm max-w-[650px]">
+      <div className="grid grid-cols-[auto_1fr_auto] items-center mt-4 mb-8 text-sm]">
         <div className="bg-gray-100 dark:bg-gray-800 rounded-md px-2 py-1 tracking-tighter">
           {post.publishedAt}
         </div>
