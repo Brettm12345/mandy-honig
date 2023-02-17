@@ -9,7 +9,7 @@ const inter = Inter({subsets: ['latin']})
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <ServerThemeProvider attribute="class">
-      <html lang="en">
+      <html lang="en" className={inter.className}>
         <head>
           <script
             defer
@@ -18,7 +18,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           ></script>
         </head>
 
-        <body className={inter.className}>
+        <body>
           <Providers>
             <div className="w-full bg-gray-50 text-gray-700 px-3 md:px-0 dark:bg-gray-900 dark:text-gray-50 transition-colors ease-linear min-h-screen">
               <div className="max-w-screen-md mx-auto">
