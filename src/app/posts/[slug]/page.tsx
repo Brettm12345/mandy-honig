@@ -62,7 +62,7 @@ export default async function Blog({params}: {params: {slug: string}}) {
         <Balancer>{post.title}</Balancer>
       </h1>
       <div className="grid grid-cols-[auto_1fr_auto] items-center mt-4 mb-8 text-sm]">
-        <div className="bg-gray-100 dark:bg-gray-800 rounded-md px-2 py-1 tracking-tighter">
+        <div className="bg-gray-100 dark:bg-gray-800 rounded-md px-2 py-1 tracking-tighter text-sm">
           {post.publishedAt}
         </div>
         <div className="h-[0.2em] bg-gray-100 dark:bg-gray-800 mx-2" />
