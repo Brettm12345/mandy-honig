@@ -67,7 +67,7 @@ export default async function Blog({params}: {params: {slug: string}}) {
         </div>
         <div className="h-[0.2em] bg-gray-100 dark:bg-gray-800 mx-2" />
         <Avatar>
-          <AvatarImage src="images/avatar.jpg" />
+          <AvatarImage src="https://www.livewellwithmandy.com/images/avatar.jpg" />
           <AvatarFallback>MH</AvatarFallback>
         </Avatar>
       </div>
