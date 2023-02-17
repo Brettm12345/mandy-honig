@@ -4,6 +4,7 @@ import {Inter} from '@next/font/google'
 import './globals.css'
 import {ThemeToggle} from '@/components/ThemeToggle'
 import Providers from '@/components/Providers'
+import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar'
 
 const inter = Inter({subsets: ['latin']})
 export default function RootLayout({children}: {children: React.ReactNode}) {
@@ -24,12 +25,18 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
               <div className="max-w-screen-md mx-auto">
                 <div className="border-b border-gray-300 dark:border-gray-800 pb-4">
                   <div className="flex flex-row justify-between items-center">
-                    <div className="pt-16 pb-8">
-                      <div className="font-semibold text-3xl text-gray-900 dark:text-gray-50">
-                        Mandy Honig
-                      </div>
-                      <div className="text-xl">
-                        A blog for health, fitness and sobriety advice.
+                    <div className="flex flex-row pt-16 pb-8 space-x-1 md:space-x-3">
+                      <Avatar className="h-16 w-16">
+                        <AvatarImage src="https://www.livewellwithmandy.com/images/avatar.jpg" />
+                        <AvatarFallback>MH</AvatarFallback>
+                      </Avatar>
+                      <div className="flex flex-col">
+                        <div className="font-semibold text-3xl text-gray-900 dark:text-gray-50">
+                          Mandy Honig
+                        </div>
+                        <div className="text-xl">
+                          A blog for health, fitness and sobriety advice.
+                        </div>
                       </div>
                     </div>
                     <ThemeToggle />
