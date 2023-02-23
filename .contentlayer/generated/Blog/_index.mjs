@@ -2,5 +2,6 @@
 
 import fiveThingsThatHappenWhenYouLeaveDrinkingCultutreMdx from './five-things-that-happen-when-you-leave-drinking-cultutre.mdx.json' assert { type: 'json' }
 import runnersMindMdx from './runners-mind.mdx.json' assert { type: 'json' }
+import thingsToBearInMindForTheNewYorkBikeTourMdx from './things-to-bear-in-mind-for-the-new-york-bike-tour.mdx.json' assert { type: 'json' }
 
-export const allBlogs = [fiveThingsThatHappenWhenYouLeaveDrinkingCultutreMdx, runnersMindMdx]
+export const allBlogs = [fiveThingsThatHappenWhenYouLeaveDrinkingCultutreMdx, runnersMindMdx, thingsToBearInMindForTheNewYorkBikeTourMdx]

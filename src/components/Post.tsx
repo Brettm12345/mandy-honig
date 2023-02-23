@@ -21,7 +21,6 @@ export const Post: FC<PostProps> = ({blog}) => (
       className="rounded-md min-w-[120px] h-[200px] mx-auto mb-4"
       alt={blog.title}
       src={blog.image!}
-      layout="fixed"
       width={150}
       height={200}
     />

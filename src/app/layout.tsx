@@ -25,7 +25,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
               <div className="max-w-screen-md mx-auto">
                 <div className="border-b border-gray-300 dark:border-gray-800 pb-4">
                   <div className="flex flex-row justify-between items-center">
-                    <div className="flex flex-row pt-16 pb-8 space-x-1 md:space-x-3">
+                    <div className="flex flex-row pt-16 pb-8 space-x-3">
                       <Avatar className="h-16 w-16">
                         <AvatarImage src="https://www.livewellwithmandy.com/images/avatar.jpg" />
                         <AvatarFallback>MH</AvatarFallback>
